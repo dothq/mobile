@@ -1,4 +1,6 @@
 import React from 'react';
+import SplashScreen from 'react-native-splash-screen';
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -18,7 +20,12 @@ import {
 
 declare const global: {HermesInternal: null | {}};
 
-const App = () => {
+export default class App extends React.Component {
+  componentDidMount() {
+    SplashScreen.hide()
+  }
+  
+  render() {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -63,7 +70,8 @@ const App = () => {
         </ScrollView>
       </SafeAreaView>
     </>
-  );
+    );
+  }
 };
 
 const styles = StyleSheet.create({
@@ -104,5 +112,3 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
 });
-
-export default App;
