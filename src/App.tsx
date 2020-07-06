@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 
 import OnboardingScreen from './onboarding';
 import OnboardingSyncScreen from './onboarding/sync';
@@ -29,20 +29,22 @@ export default class App extends React.Component {
       <Stack.Navigator 
         initialRouteName={'Onboarding'}
         screenOptions={{
-          headerShown: false
-        }}>
+          headerShown: false,
+          
+        }} 
+        >
         <Stack.Screen
           name="Onboarding"
           component={OnboardingScreen}
-          options={{ headerTitle: props => <BlankHeader /> }} />
+          options={{ headerTitle: props => <BlankHeader />, cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} />
         <Stack.Screen
           name="OnboardingSync"
           component={OnboardingSyncScreen}
-          options={{ title: 'Sync' }} />
+          options={{ title: 'Sync', cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} />
         <Stack.Screen
           name="OnboardingCustomize"
           component={OnboardingCustomizeScreen}
-          options={{ title: 'Customize' }} />
+          options={{ title: 'Customize', cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} />
 
         <Stack.Screen
           name="StartPage"
