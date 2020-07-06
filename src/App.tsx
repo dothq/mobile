@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import OnboardingScreen from './onboarding';
 import OnboardingSyncScreen from './onboarding/sync';
 import OnboardingCustomizeScreen from './onboarding/customize';
+import StartPage from './Startpage';
 
 const Stack = createStackNavigator();
 
@@ -38,10 +39,15 @@ export default class App extends React.Component {
           name="OnboardingSync"
           component={OnboardingSyncScreen}
           options={{ title: 'Sync' }} />
-          <Stack.Screen
+        <Stack.Screen
           name="OnboardingCustomize"
           component={OnboardingCustomizeScreen}
           options={{ title: 'Customize' }} />
+
+        <Stack.Screen
+          name="StartPage"
+          component={StartPage}
+          options={{ title: 'Start' }} />
       </Stack.Navigator>
     </NavigationContainer>
     );

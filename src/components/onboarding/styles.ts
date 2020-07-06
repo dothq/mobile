@@ -64,5 +64,12 @@ export const OnboardingStyles = StyleSheet.create({
     height: 5,
     width: 5,
     margin: 3
+  },
+
+  grid: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center'
   }
 })
