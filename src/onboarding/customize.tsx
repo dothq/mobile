@@ -20,14 +20,14 @@ export default function OnboardingCustomizeScreen({ navigation }: { navigation: 
       </View>
       <View style={{ marginTop: '15%' }}>
         <View style={OnboardingStyles.grid}>
-          <GridElement isVisible={googleChecked} onClick={() => setGoogleChecked(!googleChecked)} icon={require('../../assets/startpage/google.png')}/>
+          <GridElement isVisible={googleChecked} onClick={() => setGoogleChecked(!googleChecked)} icon={require('../../assets/startpage/google.png')} size={96}/>
           <GridElement isVisible={ddgChecked} onClick={() => setDdgChecked(!ddgChecked)} icon={require('../../assets/startpage/duckduckgo.png')}/>
-          <GridElement isVisible={wikipediaChecked} onClick={() => setWikipediaChecked(!wikipediaChecked)} icon={require('../../assets/startpage/wikipedia.png')}/>
+          <GridElement isVisible={wikipediaChecked} onClick={() => setWikipediaChecked(!wikipediaChecked)} icon={require('../../assets/startpage/wikipedia.png')} size={96}/>
         </View>
         <View style={OnboardingStyles.grid}>
-          <GridElement isVisible={googleChecked} onClick={() => setGoogleChecked(!googleChecked)} icon={'Google'}/>
+          <GridElement isVisible={googleChecked} onClick={() => setGoogleChecked(!googleChecked)} icon={'Google'} size={96}/>
           <GridElement isVisible={ddgChecked} onClick={() => setDdgChecked(!ddgChecked)} icon={'DDG'}/>
-          <GridElement isVisible={wikipediaChecked} onClick={() => setWikipediaChecked(!wikipediaChecked)} icon={'Wikipedia'}/>
+          <GridElement isVisible={wikipediaChecked} onClick={() => setWikipediaChecked(!wikipediaChecked)} icon={'Wikipedia'} size={96}/>
         </View>
       </View>
       <View style={OnboardingStyles.footer}>

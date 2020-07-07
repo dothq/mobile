@@ -4,7 +4,7 @@ import { Text } from 'react-native';
 import { TouchableHighlight, TouchableOpacity } from "react-native-gesture-handler";
 import Icon from 'react-native-vector-icons/Feather';
 
-export function GridElement({ isVisible, onClick, icon }: { isVisible: boolean; onClick: any; icon: any }) {
+export function GridElement({ isVisible, onClick, icon, size }: { isVisible: boolean; onClick: any; icon: any; size?: number }) {
   return (
     <TouchableOpacity
       onPress={onClick}
@@ -14,7 +14,7 @@ export function GridElement({ isVisible, onClick, icon }: { isVisible: boolean; 
           <Icon name="check" style={styles.gridCircleCheckmark}/>
         </View>}
         <View style={isVisible ? styles.gridContentSpacer : { display: 'none' }} />
-          <Image source={icon} style={styles.gridImage} />
+          <Image source={icon} style={{ width: size ? size : 56, height: size ? size : 56}} />
       </View>
     </TouchableOpacity>
   )
@@ -59,9 +59,5 @@ const styles = StyleSheet.create({
   gridCircleCheckmark: {
     color: '#fff',
     fontSize: 18
-  },
-  gridImage: {
-    width: 56,
-    height: 56
   }
 })

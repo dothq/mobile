@@ -18,7 +18,7 @@ export function NewsArticle({ article }: { article: any }) {
       <View>
         <View style={{ flexDirection: 'row' }}>
           <Image source={{ uri: article.urlToImage }} style={styles.image}/>
-          <View style={{ width: '70%', }}>
+          <View style={{ width: '75%', }}>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.author}>{article.source.name}</Text>
           </View>
@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     marginVertical: 10,
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    marginLeft: 17
   },
   title: {
     fontSize: 14,

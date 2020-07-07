@@ -7,6 +7,7 @@ import { Searchbox } from './components/startpage/Searchbox';
 import { TouchableHighlight, ScrollView } from 'react-native-gesture-handler';
 import { NewsArticle } from './components/startpage/NewsArticle';
 import Icon from 'react-native-vector-icons/Feather';
+import { TabCountSingleNumber, TabCountDualNumber } from './components/TabCount';
 
 export default function StartPage({ navigation }: { navigation: any }) {
   const [results, setResults] = React.useState({});
@@ -23,6 +24,9 @@ export default function StartPage({ navigation }: { navigation: any }) {
     newsApiInstance.get(url).then(res => setResults(res.data))
   })
 
+  // Image
+
+
   return (
     <>
     <ScrollView
@@ -36,9 +40,9 @@ export default function StartPage({ navigation }: { navigation: any }) {
       </View>
       <Searchbox engine={'Google'} />
       <View style={StartpageStyles.grid}>
-        <GridElement elementName={'Google'} icon={require('../assets/startpage/google.png')} onClick={null}/>
+        <GridElement elementName={'Google'} icon={require('../assets/startpage/google.png')} onClick={null} size={96}/>
         <GridElement elementName={'DuckDuckGo'} icon={require('../assets/startpage/duckduckgo.png')} onClick={null}/>
-        <GridElement elementName={'Wikipedia'} icon={require('../assets/startpage/wikipedia.png')} onClick={null}/>
+        <GridElement elementName={'Wikipedia'} icon={require('../assets/startpage/wikipedia.png')} onClick={null} size={96}/>
       </View>
       <View style={StartpageStyles.newsHeader}>
         <Text style={StartpageStyles.newsHeaderText}>NEWS</Text>
@@ -84,7 +88,7 @@ export default function StartPage({ navigation }: { navigation: any }) {
           activeOpacity={0.2}
           underlayColor={'#fff'}
           onPress={() => null} >
-          <Icon name={"box"} style={StartpageStyles.footerIcon}/>
+          <TabCountSingleNumber style={StartpageStyles.footerIcon} number={1}/>
         </TouchableHighlight>
         <TouchableHighlight
           activeOpacity={0.2}
@@ -96,3 +100,7 @@ export default function StartPage({ navigation }: { navigation: any }) {
     </>
   )
 }
+
+// <line x1="9" y1="9" x2="15" y2="15" />
+// <line x1="15" y1="9" x2="9" y2="15" />
+// <Icon name={"square"} style={StartpageStyles.footerIcon}/>

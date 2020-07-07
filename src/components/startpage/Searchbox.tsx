@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     color: '#AAAAAA',
     paddingHorizontal: 0,
     marginHorizontal: 0,
+    fontSize: 16
   },
   spacer: {
     fontSize: 7,

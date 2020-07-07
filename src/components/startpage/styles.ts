@@ -22,7 +22,7 @@ export const StartpageStyles = StyleSheet.create({
     alignItems: 'center',
     position: 'absolute',
     bottom: 0,
-    height: '10%',
+    height: '7%',
     paddingHorizontal: 25,
     backgroundColor: '#fff',
     width: Dimensions.get('window').width,
@@ -35,13 +35,13 @@ export const StartpageStyles = StyleSheet.create({
     elevation: 15,
   },
   footerIcon: {
-    fontSize: 32,
-    paddingVertical: 10
+    fontSize: 24,
+    paddingVertical: 5
   },
   footerIconCenter: {
-    fontSize: 32,
+    fontSize: 24,
     borderRadius: 100,
-    padding: 10,
+    padding: 7,
     color: '#007AFF',
     backgroundColor: 'rgba(0, 122, 255, 0.25)'
   },

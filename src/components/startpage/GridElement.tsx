@@ -3,14 +3,14 @@ import { StyleSheet, View, Image } from "react-native";
 import { Text } from 'react-native';
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export function GridElement({ elementName, onClick, icon }: { elementName: string; onClick: any; icon: any }) {
+export function GridElement({ elementName, onClick, icon, size }: { elementName: string; onClick: any; icon: any; size?: number }) {
   return (
     <TouchableOpacity
       onPress={onClick}
       activeOpacity={0.2} 
       style={styles.container} >
       <View style={styles.gridElement}>
-          <Image source={icon} style={styles.gridImage} />
+          <Image source={icon} style={{ width: size ? size : 56, height: size ? size : 56 }}/>
       </View>
       <Text style={styles.gridElementName}>{elementName}</Text>
     </TouchableOpacity>
@@ -38,10 +38,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     margin: 5
-  },
-  gridImage: {
-    width: 56,
-    height: 56
   },
   gridElementName: {
     fontSize: 12,
