@@ -1,4 +1,4 @@
-package com.dotmobile;
+package co.dothq.browser;
 
 import android.content.Intent;
 import android.os.Bundle;
