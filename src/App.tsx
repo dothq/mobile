@@ -8,15 +8,9 @@ import OnboardingScreen from './onboarding';
 import OnboardingSyncScreen from './onboarding/sync';
 import OnboardingCustomizeScreen from './onboarding/customize';
 import StartPage from './Startpage';
+import PageView from './pageView';
 
 const Stack = createStackNavigator();
-
-function BlankHeader() {
-  return (
-    <>
-    </>
-  )
-}
 
 export default class App extends React.Component {
   componentDidMount() {
@@ -36,20 +30,25 @@ export default class App extends React.Component {
         <Stack.Screen
           name="Onboarding"
           component={OnboardingScreen}
-          options={{ headerTitle: props => <BlankHeader />, cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} />
+          options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} />
         <Stack.Screen
           name="OnboardingSync"
           component={OnboardingSyncScreen}
-          options={{ title: 'Sync', cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} />
+          options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} />
         <Stack.Screen
           name="OnboardingCustomize"
           component={OnboardingCustomizeScreen}
-          options={{ title: 'Customize', cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} />
+          options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} />
 
         <Stack.Screen
           name="StartPage"
           component={StartPage}
-          options={{ title: 'Start' }} />
+          options={{  }} />
+
+        <Stack.Screen
+          name="PageView"
+          component={PageView}
+          options={{  }} />
       </Stack.Navigator>
     </NavigationContainer>
     );

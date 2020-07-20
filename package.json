@@ -14,7 +14,12 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "build": "yarn build:android && yarn build:ios",
+    "build:android": "cd android && ./gradlew bundleRelease",
+    "build:ios": "echo 'iOS Build Currently Not Finished, Sorry'",
+    "test:android": "react-native run-android --variant=release",
+    "test:ios": "echo 'iOS Release Currently Not Finished, Sorry'"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
@@ -30,7 +35,8 @@
     "react-native-screens": "^2.9.0",
     "react-native-splash-screen": "^3.2.0",
     "react-native-svg": "^12.1.0",
-    "react-native-vector-icons": "^7.0.0"
+    "react-native-vector-icons": "^7.0.0",
+    "react-native-webview": "^10.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

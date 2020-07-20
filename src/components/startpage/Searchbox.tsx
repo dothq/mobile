@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { StyleSheet, View, Image, TextInput } from "react-native";
-import { Text } from 'react-native';
-import { TouchableOpacity } from "react-native-gesture-handler";
 import Icon from 'react-native-vector-icons/Feather';
 
 export function Searchbox({ engine }: { engine: string }) {

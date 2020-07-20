@@ -24,9 +24,16 @@ export default function StartPage({ navigation }: { navigation: any }) {
     newsApiInstance.get(url).then(res => setResults(res.data))
   })
 
-  // Image
+  // Reset Navigator
+  navigation.reset({
+    index: 0,
+    routes: []
+  })
 
-
+  // Load Webpage
+  const performPageLoad = () => {
+    navigation.navigate('PageView', { browserPage: 'https://dothq.co' })
+  }
   return (
     <>
     <ScrollView
@@ -81,7 +88,7 @@ export default function StartPage({ navigation }: { navigation: any }) {
         <TouchableHighlight
           activeOpacity={0.2}
           underlayColor={'#fff'}
-          onPress={() => null} >
+          onPress={() => performPageLoad()} >
           <Icon name={"search"} style={StartpageStyles.footerIconCenter}/>
         </TouchableHighlight>
         <TouchableHighlight
